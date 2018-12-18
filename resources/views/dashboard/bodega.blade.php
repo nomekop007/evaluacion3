@@ -23,6 +23,7 @@
     @csrf
     <div class="form-row">
         <div class="form-group col-md-12">
+            <p class="bg-info text-center">Registrar Pallet en Bodega</p>
             <div class="form row">
                 <div class="form-group col-md-6">
                     <label for="Trabajador">
@@ -57,9 +58,15 @@
     </div>
    
 </form>
-<h3 class="text-center">
-    Ubicacion real de todos los pallets
-</h3>
+
+<div class="form-row">
+     <div class="form-group col-md-12">
+            <div class="form row">
+<h4 class="text-center bg-primary"> Ubicacion real de todos los pallets</h4>
+            </div>
+    </div>
+</div>
+
 <table class="table mi-dataTable text-center">
     <thead class="thead-dark ">
         <tr>
@@ -139,12 +146,16 @@
         </tr>
         @endif
     
+
+
+
+    
         @endforeach
     </tbody>
 </table>
 
 
-<!-- Modal de eliminar -->
+<!-- Modal de historial -->
 <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="modal_history" role="dialog" tabindex="-1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

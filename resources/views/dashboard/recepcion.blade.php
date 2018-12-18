@@ -21,6 +21,7 @@
     @csrf
     <div class="form-row">
         <div class="form-group col-md-12">
+              <p class="bg-info text-center">Registrar Pallet en el sistema</p>
             <div class="form row">
                 <div class="form-group col-md-6">
                     <label for="proveedor">

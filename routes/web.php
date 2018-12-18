@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('dashboard','DashboardController@index')->name('dashboard');
+Route::get('dashboard','palletController@index')->name('dashboard');
 
 
 //redirecciona a las vista correspondientes

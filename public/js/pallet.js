@@ -72,7 +72,7 @@ $(document).ready(function() {
                 success: function(datos) {
                     console.log(datos);
                     if (datos == "ok") {
-                        location.reload();
+                       setTimeout(function() { window.location=window.location;},700);
                         swal('pallet Registrado', 'guardado en base de datos!', 'success')
                     } else {
                         swal('algo paso', 'faltan datos ', 'error')
@@ -131,7 +131,7 @@ $(document).ready(function() {
             },
             success: function(datos) {
                 if (datos == "ok") {
-                    location.reload();
+                    setTimeout(function() { window.location=window.location;},700);
                     Swal({
                         type: 'error',
                         title: 'pallet eliminado'
@@ -192,7 +192,7 @@ if(proveedor.length==0||tipo.length==0||peso.length==0){
             },
             success: function(datos) {
                 if (datos == "ok") {
-                    location.reload();
+                    setTimeout(function() { window.location=window.location;},700);
                     Swal({
                         type: 'success',
                         title: 'pallet editado'

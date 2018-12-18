@@ -44,7 +44,7 @@ $(document).ready(function() {
                 },
                 success: function(datos) {
                     if (datos == "ok") {
-                        location.reload();
+                       setTimeout(function() { window.location=window.location;},800);
                         swal('pallet enviado a Seleccion', 'modificado en base de datos!', 'success')
            
                     }else {
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 },
                 success: function(datos) {
                     if (datos == "ok") {
-                        location.reload();
+                        setTimeout(function() { window.location=window.location;},800);
                         swal('pallet devuelto a Bodega', 'modifiado en base de datos!', 'success')
            
                     }else {
@@ -140,7 +140,7 @@ $(document).ready(function() {
                 },
                 success: function(datos) {
                     if (datos == "ok") {
-                        location.reload();
+                       setTimeout(function() { window.location=window.location;},800);
                         swal('pallet vaciado y devuelto a Bodega', 'modifiado en base de datos!', 'success')
            
                     }else {

@@ -19,6 +19,7 @@ class bodegaController extends Controller
     {
          $pallets = pallet::all();
          $bodegas = bodega::all();
+
          $data = array( // crear arreglo para pasar un arreglo con datos
             'pallets'=>$pallets,
             'bodegas'=>$bodegas,

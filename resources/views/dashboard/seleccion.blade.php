@@ -16,10 +16,13 @@
 
 @section('contenido')
 <form>
+   
     @csrf
     <div class="form-row">
+       
         <div class="form-group col-md-12">
             <div class="form row">
+                  <p class="bg-info text-center">Ingresar pallet a Seleccion</p>
                 <div class="form-group col-md-6">
                     <label for="Trabajador">
                         Trabajador
@@ -59,12 +62,15 @@
 
 
 <br><br>
-
+ 
 <form>
+   
     @csrf
     <div class="form-row">
+
         <div class="form-group col-md-12">
             <div class="form row">
+                 <p class="bg-info text-center">Entrar pallet a bodega</p>
                 <div class="form-group col-md-6">
                     <label for="Trabajador2">
                         Trabajador
@@ -101,16 +107,20 @@
     </div>
    
 </form>
+<div class="form-row">
+     <div class="form-group col-md-12">
+            <div class="form row">
+<h4 class="text-center bg-primary">Pallets en Seleccion</h4>
+            </div>
+    </div>
+</div>
 
-<h3 class="text-center">
-   Pallets en Seleccion
-</h3>
 
 <table class="table mi-dataTable text-center">
     <thead class="thead-dark ">
         <tr>
             <th scope="col">
-                ID
+                codigo del pallet
             </th>
             <th scope="col">
                 Estado
@@ -119,13 +129,10 @@
                 Trabajador
             </th>
             <th scope="col">
-                Ubicacion
-            </th>
-            <th scope="col">
-                codigo del pallet
-            </th>
-            <th scope="col">
                 Hora y fecha
+            </th>
+            <th scope="col">
+                Ubicacion
             </th>
             <th scope="col">
                 ingresar a paking <br>(se devuelve vacia a bodega)
@@ -137,7 +144,7 @@
         @if ($b->ubicacion=='Seleccion')
         	 <tr>
             <td>
-                {{ $b->id }}
+                {{ $b->pallet }}
             </td>
             <td>
                 {{ $b->estado }}
@@ -146,13 +153,10 @@
                 {{ $b->trabajador }}
             </td>
             <td>
+                 {{ $b->is }} a {{ $b->ubicacion }} el {{ $b->updated_at }}
+            </td>
+            <td>
                 {{ $b->ubicacion }}
-            </td>
-            <td>
-                {{ $b->pallet }}
-            </td>
-            <td>
-                {{ $b->is }} a {{ $b->ubicacion }} el {{ $b->updated_at }}
             </td>
             <td>
                 <button class="btn btn-success btn-sm btn-devolver" data-id="{{ base64_encode($b->id) }}" data-url="{{ route('devolver') }}">

@@ -42,7 +42,7 @@ $(document).ready(function() {
                 },
                 success: function(datos) {
                     if (datos == "ok") {
-                        location.reload();
+                         setTimeout(function() { window.location=window.location;},800);
                         swal('pallet Registrado en bodega', 'guardado en base de datos!', 'success')
                     } else if("no"){
                         swal('El pallet ya esta en bodega', 'ya ingresado ', 'error')
